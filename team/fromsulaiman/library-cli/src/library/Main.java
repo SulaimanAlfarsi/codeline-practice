@@ -15,7 +15,7 @@ public class Main {
     }
 
     private static void printMenu() {
-        System.out.println("\n=== Library Menu ===");
+        System.out.println("\n========== Library Menu ==========");
         System.out.println("1. Add Book");
         System.out.println("2. Show Available Books");
         System.out.println("3. Borrow Book");
@@ -23,7 +23,8 @@ public class Main {
         System.out.println("5. Show All Books");
         System.out.println("6. Show Statistics");
         System.out.println("7. Remove Book");
-        System.out.println("8. Exit");
+        System.out.println("8. Clear Library");
+        System.out.println("9. Exit");
         System.out.print("Choose: ");
     }
 
@@ -79,6 +80,9 @@ public class Main {
                     library.removeBook(removeTitle);
                     break;
                 case 8:
+                    library.clear();
+                    break;
+                case 9:
                     System.out.println("Goodbye!");
                     scanner.close();
                     return;
