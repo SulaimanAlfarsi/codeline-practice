@@ -10,6 +10,9 @@ public class Library {
     }
 
     public void addBook(Book book) {
+        if (book == null) {
+            throw new IllegalArgumentException("Book cannot be null");
+        }
         books.add(book);
     }
 
