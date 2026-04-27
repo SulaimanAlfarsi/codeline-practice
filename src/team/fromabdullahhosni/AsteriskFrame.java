@@ -3,5 +3,6 @@ public class AsteriskFrame {
         System.out.println("*****");
         System.out.println("* *");
         System.out.println("* *");
+        System.out.println("*****");
     }
 }
