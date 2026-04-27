@@ -6,5 +6,6 @@ public class ModuloMagic {
         num1 = 17;
         num2 = 3;
         remainder = num1 % num2;
+        System.out.println("Remainder: " + remainder);
     }
 }
