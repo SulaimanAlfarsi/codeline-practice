@@ -24,8 +24,6 @@ public class Library {
     }
 
     public void showAvailableBooks() {
-
-    public void showAvailableBooks() {
         if (books.isEmpty()) {
             System.out.println("No books in library.");
             return;
