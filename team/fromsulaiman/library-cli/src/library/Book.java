@@ -6,9 +6,15 @@ public class Book {
     private boolean isBorrowed;
 
     public Book(String title, String author) {
+        if (title == null || title.trim().isEmpty()) {
+            throw new IllegalArgumentException("Title cannot be empty");
+        }
         this.title = title;
         this.author = author;
         this.isBorrowed = false;
+    }
+
+    public Book() {
     }
 
     public String getTitle() {
