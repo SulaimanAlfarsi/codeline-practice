@@ -106,4 +106,9 @@ public class Library {
         System.out.println("Book not found.");
         return false;
     }
+
+    public void clear() {
+        books.clear();
+        System.out.println("Library cleared.");
+    }
 }
