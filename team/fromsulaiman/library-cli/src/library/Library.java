@@ -124,4 +124,8 @@ public class Library {
     public boolean isEmpty() {
         return books.isEmpty();
     }
+
+    public boolean hasBook(String title) {
+        return findBook(title) != null;
+    }
 }
