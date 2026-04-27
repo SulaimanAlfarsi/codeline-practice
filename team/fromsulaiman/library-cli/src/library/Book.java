@@ -40,6 +40,11 @@ public class Book {
     }
 
     public void displayInfo() {
-        System.out.println("Title: " + title + ", Author: " + author + ", Borrowed: " + isBorrowed);
+        System.out.println(toString());
+    }
+
+    @Override
+    public String toString() {
+        return "Title: " + title + ", Author: " + author + ", Borrowed: " + isBorrowed;
     }
 }
