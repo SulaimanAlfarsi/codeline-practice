@@ -111,4 +111,8 @@ public class Library {
         books.clear();
         System.out.println("Library cleared.");
     }
+
+    public boolean isEmpty() {
+        return books.isEmpty();
+    }
 }
