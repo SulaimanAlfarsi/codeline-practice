@@ -6,5 +6,6 @@ public class SimpleSum {
         num1 = 15;
         num2 = 25;
         sum = num1 + num2;
+        System.out.println(sum);
     }
 }
