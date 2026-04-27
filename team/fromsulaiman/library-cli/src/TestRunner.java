@@ -1,7 +1,3 @@
-package team.fromsulaiman;
-
-import java.util.Scanner;
-
 public class TestRunner {
     public static void main(String[] args) {
         Library library = new Library();

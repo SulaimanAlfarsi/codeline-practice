@@ -1,5 +1,3 @@
-package team.fromsulaiman;
-
 import java.util.ArrayList;
 
 public class Library {
