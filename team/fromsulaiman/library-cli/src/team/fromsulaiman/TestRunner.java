@@ -1,4 +1,4 @@
-package library;
+package team.fromsulaiman;
 
 import java.util.Scanner;
 

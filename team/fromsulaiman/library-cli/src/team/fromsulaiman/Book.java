@@ -1,4 +1,4 @@
-package library;
+package team.fromsulaiman;
 
 public class Book {
     private String title;
