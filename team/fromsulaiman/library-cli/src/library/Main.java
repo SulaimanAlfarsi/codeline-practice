@@ -59,13 +59,11 @@ public class Main {
                     library.showAvailableBooks();
                     break;
                 case 3:
-                    System.out.print("Enter book title to borrow: ");
-                    String borrowTitle = scanner.nextLine();
+                    String borrowTitle = getInput(scanner, "Enter book title to borrow: ");
                     library.borrowBook(borrowTitle);
                     break;
                 case 4:
-                    System.out.print("Enter book title to return: ");
-                    String returnTitle = scanner.nextLine();
+                    String returnTitle = getInput(scanner, "Enter book title to return: ");
                     library.returnBook(returnTitle);
                     break;
                 case 5:
