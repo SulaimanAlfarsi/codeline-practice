@@ -24,15 +24,16 @@ public class Library {
     }
 
     public void showAvailableBooks() {
-        if (books.isEmpty()) {
-            System.out.println("No books in library.");
-            return;
-        }
+        boolean found = false;
         System.out.println("Available Books:");
         for (Book book : books) {
             if (!book.isBorrowed()) {
                 book.displayInfo();
+                found = true;
             }
+        }
+        if (!found) {
+            System.out.println("No available books.");
         }
     }
 
