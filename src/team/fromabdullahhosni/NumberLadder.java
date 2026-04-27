@@ -4,5 +4,6 @@ public class NumberLadder {
         System.out.println("1\t2");
         System.out.println("1\t2\t3");
         System.out.println("1\t2\t3\t4");
+        System.out.println("1\t2\t3\t4\t5");
     }
 }
