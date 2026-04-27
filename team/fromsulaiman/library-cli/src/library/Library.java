@@ -74,4 +74,24 @@ public class Library {
         }
         return count;
     }
+
+    public void showAllBooks() {
+        if (books.isEmpty()) {
+            System.out.println("No books in library.");
+            return;
+        }
+        System.out.println("All Books:");
+        for (Book book : books) {
+            book.displayInfo();
+        }
+    }
+
+    public Book findBook(String title) {
+        for (Book book : books) {
+            if (book.getTitle().equalsIgnoreCase(title)) {
+                return book;
+            }
+        }
+        return null;
+    }
 }
