@@ -128,11 +128,16 @@ public class Library {
     }
 
     public void listBorrowedBooks() {
+        boolean found = false;
         System.out.println("Borrowed Books:");
         for (Book book : books) {
             if (book.isBorrowed()) {
                 book.displayInfo();
+                found = true;
             }
+        }
+        if (!found) {
+            System.out.println("No books currently borrowed.");
         }
     }
 }
