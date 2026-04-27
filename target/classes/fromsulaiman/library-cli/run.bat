@@ -1,4 +1,4 @@
 @echo off
-cd /d "%~dp0..\src"
-echo 9 | java library.Main
+cd /d "%~dp0src"
+java team.fromsulaiman.Main
 pause
