@@ -60,4 +60,18 @@ public class Library {
         System.out.println("Book not found.");
         return false;
     }
+
+    public int getBookCount() {
+        return books.size();
+    }
+
+    public int getAvailableCount() {
+        int count = 0;
+        for (Book book : books) {
+            if (!book.isBorrowed()) {
+                count++;
+            }
+        }
+        return count;
+    }
 }
