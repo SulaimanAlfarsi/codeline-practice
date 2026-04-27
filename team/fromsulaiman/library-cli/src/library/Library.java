@@ -19,6 +19,12 @@ public class Library {
         books.add(book);
     }
 
+    public ArrayList<Book> getBooks() {
+        return books;
+    }
+
+    public void showAvailableBooks() {
+
     public void showAvailableBooks() {
         if (books.isEmpty()) {
             System.out.println("No books in library.");
