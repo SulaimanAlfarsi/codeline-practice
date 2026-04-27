@@ -6,5 +6,6 @@ public class VariableSwap {
         a = 10;
         b = 20;
         System.out.println("Before swap: a = " + a + ", b = " + b);
+        temp = a;
     }
 }
