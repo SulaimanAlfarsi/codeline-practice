@@ -3,5 +3,8 @@ public class SimpleDivision {
         int total;
         int parts;
         int quotient;
+        total = 100;
+        parts = 5;
+        quotient = total / parts;
     }
 }
