@@ -22,7 +22,8 @@ public class Main {
         System.out.println("4. Return Book");
         System.out.println("5. Show All Books");
         System.out.println("6. Show Statistics");
-        System.out.println("7. Exit");
+        System.out.println("7. Remove Book");
+        System.out.println("8. Exit");
         System.out.print("Choose: ");
     }
 
@@ -74,6 +75,10 @@ public class Main {
                     System.out.println("Available books: " + library.getAvailableCount());
                     break;
                 case 7:
+                    String removeTitle = getInput(scanner, "Enter book title to remove: ");
+                    library.removeBook(removeTitle);
+                    break;
+                case 8:
                     System.out.println("Goodbye!");
                     scanner.close();
                     return;
