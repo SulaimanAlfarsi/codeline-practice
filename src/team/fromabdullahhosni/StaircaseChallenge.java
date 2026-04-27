@@ -3,5 +3,6 @@ public class StaircaseChallenge {
         System.out.println("#");
         System.out.println("##");
         System.out.println("###");
+        System.out.println("####");
     }
 }
