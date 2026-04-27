@@ -94,4 +94,16 @@ public class Library {
         }
         return null;
     }
+
+    public boolean removeBook(String title) {
+        for (int i = 0; i < books.size(); i++) {
+            if (books.get(i).getTitle().equalsIgnoreCase(title)) {
+                books.remove(i);
+                System.out.println("Book removed.");
+                return true;
+            }
+        }
+        System.out.println("Book not found.");
+        return false;
+    }
 }
