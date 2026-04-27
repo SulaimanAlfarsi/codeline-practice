@@ -3,5 +3,8 @@ public class ProductPro {
         double num1;
         double num2;
         double product;
+        num1 = 12.5;
+        num2 = 4.0;
+        product = num1 * num2;
     }
 }
