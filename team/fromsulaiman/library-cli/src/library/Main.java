@@ -74,6 +74,7 @@ public class Main {
                 case 6:
                     System.out.println("Total books: " + library.getBookCount());
                     System.out.println("Available books: " + library.getAvailableCount());
+                    System.out.println("Borrowed books: " + (library.getBookCount() - library.getAvailableCount()));
                     break;
                 case 7:
                     String removeTitle = getInput(scanner, "Enter book title to remove: ");
