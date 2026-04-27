@@ -6,5 +6,6 @@ public class NameWeaver {
         firstName = "John";
         lastName = "Doe";
         fullName = firstName + " " + lastName;
+        System.out.println(fullName);
     }
 }
