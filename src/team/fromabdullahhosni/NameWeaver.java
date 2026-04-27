@@ -3,5 +3,8 @@ public class NameWeaver {
         String firstName;
         String lastName;
         String fullName;
+        firstName = "John";
+        lastName = "Doe";
+        fullName = firstName + " " + lastName;
     }
 }
