@@ -16,7 +16,9 @@ public class Main {
 
     private static void printMenu() {
         System.out.println();
-        System.out.println("========== Library Menu ==========");
+        System.out.println("==================================");
+        System.out.println("        Library Menu             ");
+        System.out.println("==================================");
         System.out.println("1. Add Book");
         System.out.println("2. Show Available Books");
         System.out.println("3. Borrow Book");
