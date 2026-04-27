@@ -126,4 +126,13 @@ public class Library {
     public boolean hasBook(String title) {
         return findBook(title) != null;
     }
+
+    public void listBorrowedBooks() {
+        System.out.println("Borrowed Books:");
+        for (Book book : books) {
+            if (book.isBorrowed()) {
+                book.displayInfo();
+            }
+        }
+    }
 }
