@@ -10,6 +10,7 @@ public class Car {
         this.id = id;
         this.model = model;
         this.isRented = false;
+        this.customerName = null;
     }
 
     public String getId() { return id; }
