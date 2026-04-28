@@ -1,3 +1,5 @@
+package team.fromabdullahhosni;
+
 /**
  * ProductPro - Demonstrates multiplication of double values.
  * 

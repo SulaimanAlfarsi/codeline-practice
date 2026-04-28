@@ -1,3 +1,5 @@
+package team.fromabdullahhosni;
+
 /**
  * StarMatrix - Prints a 5x5 grid of asterisks.
  * 

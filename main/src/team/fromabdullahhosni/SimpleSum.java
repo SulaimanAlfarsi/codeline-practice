@@ -1,3 +1,5 @@
+package team.fromabdullahhosni;
+
 /**
  * SimpleSum - Demonstrates basic integer addition.
  * 

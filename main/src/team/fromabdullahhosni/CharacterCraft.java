@@ -1,3 +1,5 @@
+package team.fromabdullahhosni;
+
 /**
  * CharacterCraft - Demonstrates accessing a character at a specific index.
  * 
