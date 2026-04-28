@@ -56,6 +56,27 @@ public class Main {
                     }
                 }
 
+                double price;
+
+                while (true) {
+                    System.out.print("Price: ");
+                    try {
+                        price = scanner.nextDouble();
+
+                        if (price <= 0) {
+                            System.out.println("Price must be positive.");
+                            continue;
+                        }
+
+                        break;
+
+                    } catch (Exception e) {
+                        System.out.println("Invalid number.");
+                        scanner.nextLine();
+                    }
+                }
+                scanner.nextLine();
+
             }
 
         }
