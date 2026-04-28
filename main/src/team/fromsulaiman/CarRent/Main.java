@@ -57,6 +57,11 @@ public class Main {
             else if (choice == 2) {
                 service.viewCars();
             }
+            else if (choice == 3) {
+                System.out.print("Enter Car ID: ");
+                String id = scanner.nextLine();
+                service.rentCar(id);
+            }
 
         }
     }
