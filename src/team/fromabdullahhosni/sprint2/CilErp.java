@@ -12,3 +12,5 @@ public class CilErp {
 //Input Storing
         ArrayList<Integer> complains = new ArrayList<Integer>();
         ArrayList<String> descriptions = new ArrayList<String>();
+        ArrayList<String> complainsProiorty = new ArrayList<String>();
+        HashMap<Integer, String> complainStatus = new HashMap<>();
