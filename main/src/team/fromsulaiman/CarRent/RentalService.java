@@ -1,5 +1,7 @@
 package team.fromsulaiman.CarRent;
 import java.util.ArrayList;
+import java.io.FileWriter;
+import java.io.IOException;
 
 
 public class RentalService {
@@ -85,6 +87,18 @@ public class RentalService {
 
         for (RentalRecord r : history) {
             r.display();
+        }
+    }
+
+    public void saveToFile() {
+        try (FileWriter writer = new FileWriter("data.txt")) {
+
+            for (Car car : cars) {
+                writer.write(car.getId() + "," + car.getModel() + "," + car.isRented() + "\n");
+            }
+
+        } catch (IOException e) {
+            System.out.println("Error saving file.");
         }
     }
 

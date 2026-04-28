@@ -12,4 +12,6 @@ public class RentalRecord {
     public void display() {
         System.out.println(carId + " rented by " + customerName);
     }
+
+
 }
