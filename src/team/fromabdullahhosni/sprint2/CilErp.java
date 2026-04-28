@@ -60,3 +60,5 @@ public class CilErp {
                             if (scannerBuffer.hasNextInt()) {
                                 //taking Input
                                 int complainIndex = Integer.parseInt(scannerBuffer.nextLine());
+                                System.out.println("Enter the complain Description..>");
+                                String complainDescription = scannerBuffer.nextLine();
