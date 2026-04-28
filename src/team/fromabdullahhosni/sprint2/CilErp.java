@@ -186,3 +186,21 @@ public class CilErp {
 
                                     System.out.println("========== Closing complain");
                                     System.out.println("Enter the complain Id Example[ComplainID: 8868]");
+
+                                    //handling Crash program
+                                    if (scannerBuffer.hasNextInt()) {
+                                    int closingComplain = Integer.parseInt(scannerBuffer.nextLine());
+
+                                    int searchComplainIndex = complains.indexOf(closingComplain);
+
+                                    if (searchComplainIndex >= complains.size() || searchComplainIndex < 0) {
+
+                                        System.out.println("Try again");
+                                    } else {
+
+                                        System.out.println("Closing complain *******");
+                                        //changing the status from open to close
+                                        complainStatus.replace(closingComplain, "Closed");
+                                        System.out.printf("Sucessfully!\nclosed the complain: #[%s]\ncomplain status changed to >>>>>>>>>> %s\n", complains.get(searchComplainIndex), complainStatus.get(searchComplainIndex));
+                                        }
+                                    }
