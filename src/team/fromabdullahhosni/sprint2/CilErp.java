@@ -216,3 +216,8 @@ public class CilErp {
                                 else if (adminMenuOption == 4) {
                                     System.out.println("Staff assigning ---------");
                                     System.out.print("1: Assign staff to a complain\n2: View all assignment\n");
+
+                                    //handling Crash program
+                                    if (scannerBuffer.hasNextInt()) {
+
+                                        int staffAdminMenu = Integer.parseInt(scannerBuffer.nextLine());
