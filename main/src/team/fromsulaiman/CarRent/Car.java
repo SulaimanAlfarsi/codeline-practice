@@ -17,8 +17,9 @@ public class Car {
     public String getModel() { return model; }
     public boolean isRented() { return isRented; }
 
-    public void rent() {
-        isRented = true;
+    public void rent(String customerName) {
+        this.isRented = true;
+        this.customerName = customerName;
     }
 
     public void returnCar() {
