@@ -28,7 +28,8 @@ public class Car {
     }
 
     public void displayInfo() {
-        System.out.println(id + " | " + model + " | " + (isRented ? "Rented" : "Available"));
+        String status = isRented ? "Rented by " + customerName : "Available";
+        System.out.println(id + " | " + model + " | " + status);
     }
 
 }
