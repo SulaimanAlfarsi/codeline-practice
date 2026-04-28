@@ -45,3 +45,8 @@ public class CilErp {
                 if (IndexOption == 1) {
                     System.out.println("Customer module");
                     System.out.println("Enter an option :\n1: create a Complain\n2: Exit to main menu");
+
+
+                    //handling Crash program
+                    if (scannerBuffer.hasNextInt()) {
+                        int customerIndex = Integer.parseInt(scannerBuffer.nextLine());
