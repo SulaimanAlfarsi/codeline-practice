@@ -138,3 +138,5 @@ public class CilErp {
                             System.out.println("Invaid Pin\t\t\t No Access Granted! try Again");
                         }
                         else {
+
+                            System.out.println("Admin User Granted\n\n\nEnter an option :\n1: View All Complains\n2: Search a complaint by ID\n3: close a complaint\n4: Assign complain to a Staff member \n5: Exit to main menu");
