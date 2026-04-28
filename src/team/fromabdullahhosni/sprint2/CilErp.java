@@ -231,3 +231,5 @@ public class CilErp {
                                                 //get a particular report
                                                 int getIndex = complains.indexOf(complainid);
                                                 int staffIndexValue = complains.get(getIndex);
+                                                //checking for Non-existing complaints or Closed complaints .
+                                                if (complainid != staffIndexValue && complainStatus.equals("Closed") || complainid == staffIndexValue && complainStatus.equals("Closed")) {
