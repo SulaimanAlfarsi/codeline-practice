@@ -249,3 +249,8 @@ public class CilErp {
                                                 System.out.println("try again");
 
                                             }
+                                            else if (staffAdminMenu == 2) {
+                                                System.out.println("===== staff complains =====");
+                                                System.out.println(staffComplains);
+
+                                            }
