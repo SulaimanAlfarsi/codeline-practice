@@ -43,6 +43,18 @@ public class Main {
                 else {
                     System.out.println("Invalid choice");
                 }
+                String name;
+
+                while (true) {
+                    System.out.print("Name: ");
+                    name = scanner.nextLine();
+
+                    if (name.trim().isEmpty()) {
+                        System.out.println("Name cannot be empty.");
+                    } else {
+                        break;
+                    }
+                }
 
             }
 
