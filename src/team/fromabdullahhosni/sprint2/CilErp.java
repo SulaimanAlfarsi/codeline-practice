@@ -33,3 +33,10 @@ public class CilErp {
             System.out.println("3. Support Staff");
             System.out.println("4. Exit");
             System.out.println("*==================================*      ");
+
+
+//  menu Options
+//==========================================================================================================
+            //handling Crash program
+            if (scannerBuffer.hasNextInt()) {
+                int IndexOption = Integer.parseInt(scannerBuffer.nextLine());
