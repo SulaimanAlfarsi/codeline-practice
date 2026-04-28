@@ -1,4 +1,4 @@
-package team.fromabdullahhosni;
+package team.fromabdullahhosni.sprint1;
 
 /**
  * AsteriskFrame - Prints a hollow box made of asterisks.

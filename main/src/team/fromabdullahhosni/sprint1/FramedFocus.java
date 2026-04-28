@@ -1,4 +1,4 @@
-package team.fromabdullahhosni;
+package team.fromabdullahhosni.sprint1;
 
 /**
  * FramedFocus - Displays a message inside a star frame.

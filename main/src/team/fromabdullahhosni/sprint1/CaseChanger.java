@@ -1,4 +1,4 @@
-package team.fromabdullahhosni;
+package team.fromabdullahhosni.sprint1;
 
 /**
  * CaseChanger - Demonstrates converting strings to upper and lower case.
