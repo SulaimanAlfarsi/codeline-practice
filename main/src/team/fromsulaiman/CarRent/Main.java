@@ -72,8 +72,7 @@ public class Main {
                 service.returnCar(id);
             }
             else if (choice == 5) {
-                System.out.println("Goodbye!");
-                break;
+                service.viewHistory();
             }
             else {
                 System.out.println("Invalid choice.");
