@@ -1,3 +1,5 @@
+package team.fromabdullahhosni;
+
 /**
  * NumberLadder - Prints a climbing pattern of numbers.
  * 

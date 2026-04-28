@@ -1,3 +1,5 @@
+package team.fromabdullahhosni;
+
 /**
  * InitialImpression - Demonstrates extracting the first character from a string.
  * 

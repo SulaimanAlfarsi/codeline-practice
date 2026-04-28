@@ -1,3 +1,5 @@
+package team.fromabdullahhosni;
+
 /**
  * StudentInfo - Displays student information in a table format.
  * 

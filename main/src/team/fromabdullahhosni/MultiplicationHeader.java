@@ -1,3 +1,5 @@
+package team.fromabdullahhosni;
+
 /**
  * MultiplicationHeader - Displays a formatted multiplication table header.
  * 

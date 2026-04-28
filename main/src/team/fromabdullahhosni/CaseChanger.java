@@ -1,3 +1,5 @@
+package team.fromabdullahhosni;
+
 /**
  * CaseChanger - Demonstrates converting strings to upper and lower case.
  * 

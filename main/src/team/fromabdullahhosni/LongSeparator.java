@@ -1,3 +1,5 @@
+package team.fromabdullahhosni;
+
 /**
  * LongSeparator - Prints a line of 50 equal signs.
  * 

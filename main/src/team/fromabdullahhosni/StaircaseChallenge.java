@@ -1,3 +1,5 @@
+package team.fromabdullahhosni;
+
 /**
  * StaircaseChallenge - Prints a staircase pattern using # symbols.
  * 

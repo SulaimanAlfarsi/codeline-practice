@@ -1,3 +1,5 @@
+package team.fromabdullahhosni;
+
 /**
  * ModuloMagic - Demonstrates the modulo operator to find remainders.
  * 
