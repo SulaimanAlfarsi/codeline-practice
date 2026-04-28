@@ -33,6 +33,9 @@ public class Main {
                 else if (choice == 2) {
                     cart.viewCart();
                 }
+                else if (choice == 3) {
+                    System.out.println("Total: " + cart.getTotal());
+                }
 
 
             }
