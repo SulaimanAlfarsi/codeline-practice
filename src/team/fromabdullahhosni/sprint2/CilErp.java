@@ -67,3 +67,6 @@ public class CilErp {
                                 if (complainDescription.isEmpty() || complainIndex == 0) {
                                     System.out.println("please fill all options, try again!");
                                 } else {
+                                    //processing - Adding complains
+                                    complains.add(complainIndex);
+                                    descriptions.add(complainDescription);
