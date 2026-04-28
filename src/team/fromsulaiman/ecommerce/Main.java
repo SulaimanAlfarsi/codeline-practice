@@ -30,6 +30,9 @@ public class Main {
 
                     cart.addItem(new Product(name, price), qty);
                 }
+                else if (choice == 2) {
+                    cart.viewCart();
+                }
 
 
             }
