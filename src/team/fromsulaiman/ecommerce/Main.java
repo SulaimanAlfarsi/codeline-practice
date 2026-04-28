@@ -17,6 +17,20 @@ public class Main {
                 int choice = scanner.nextInt();
                 scanner.nextLine();
 
+                if (choice == 1) {
+                    System.out.print("Name: ");
+                    String name = scanner.nextLine();
+
+                    System.out.print("Price: ");
+                    double price = scanner.nextDouble();
+
+                    System.out.print("Quantity: ");
+                    int qty = scanner.nextInt();
+                    scanner.nextLine();
+
+                    cart.addItem(new Product(name, price), qty);
+                }
+
 
             }
 
