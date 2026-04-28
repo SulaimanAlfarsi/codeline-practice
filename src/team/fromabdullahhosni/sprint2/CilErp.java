@@ -14,3 +14,13 @@ public class CilErp {
         ArrayList<String> descriptions = new ArrayList<String>();
         ArrayList<String> complainsProiorty = new ArrayList<String>();
         HashMap<Integer, String> complainStatus = new HashMap<>();
+        //hash map
+        HashMap<Integer, String> staffComplains = new HashMap<>();
+        //task 5
+        ArrayList<String> staff = new ArrayList<>();
+        ArrayList<Integer> complainAssined = new ArrayList<>();
+        ArrayList<String> comment = new ArrayList<>();
+
+        String[] proiorty = {"Low", "Medium", "High"};
+//  Looping Menu
+        boolean menuIsRunning = true;
