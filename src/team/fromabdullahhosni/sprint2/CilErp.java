@@ -89,3 +89,6 @@ public class CilErp {
                                         System.out.printf("Current status : [%s]\n", complainsProiorty.get(currentComplain));
                                         //removing old one
                                         complainsProiorty.remove(currentComplain);
+
+                                        System.out.print("choose the new status \"Low\" \"High\" \"Medium\" .....>\t");
+                                        String chooseProiorty = scannerBuffer.nextLine();
