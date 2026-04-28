@@ -60,7 +60,11 @@ public class Main {
             else if (choice == 3) {
                 System.out.print("Enter Car ID: ");
                 String id = scanner.nextLine();
-                service.rentCar(id);
+
+                System.out.print("Customer Name: ");
+                String name = scanner.nextLine();
+
+                service.rentCar(id, name);
             }
             else if (choice == 4) {
                 System.out.print("Enter Car ID: ");
