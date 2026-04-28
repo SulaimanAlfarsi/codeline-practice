@@ -4,6 +4,7 @@ public class Car {
     private String id;
     private String model;
     private boolean isRented;
+    private String customerName;
 
     public Car(String id, String model) {
         this.id = id;
