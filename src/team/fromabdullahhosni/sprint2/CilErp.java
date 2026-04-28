@@ -1,10 +1,8 @@
 package team.fromabdullahhosni.sprint2;
 
-
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Scanner;
-
 
 public class CilErp {
     public static void main(String[] args) {
@@ -24,6 +22,7 @@ public class CilErp {
         ArrayList<String> comment = new ArrayList<>();
 
         String[] proiorty = {"Low", "Medium", "High"};
+
 //  Looping Menu
         boolean menuIsRunning = true;
         while (menuIsRunning == true) {
@@ -119,22 +118,8 @@ public class CilErp {
                         System.out.println(" Try again ,\n please input vaild option ex: 1,2,...,4");
                         System.out.println("Going back to Main Menu");
 
-              }
-          }
-
-        scannerBuffer.close();
-    }
-}
-
-//Regarding complain status , New array list is been Added as new Input
-
-//When new ticket is added the Array list store its status to "Open"
-
-//Admin can change the status by calling the index and modifying the code.
-
-//extending the admin page, new hash map added in input of the program , they will store [Key: value] for support staff
-
-//support staff menu is located on admin option in the program
+                    }
+                }
 //==========================================================================================================
                 else if (IndexOption == 2) {
                     //!!!!!!!!
@@ -169,9 +154,10 @@ public class CilErp {
                                     //Printing ALL Complains Tickets
                                     for (int allComplains = 0; allComplains < complains.size(); allComplains++) {
 
-                                         System.out.printf("# --- Id[%d]\tDescription[%s]\tProiorty[%s]\n", complains.get(allComplains)
-                                                 , descriptions.get(allComplains), complainsProiorty.get(allComplains));
+                                        System.out.printf("# --- Id[%d]\tDescription[%s]\tProiorty[%s]\n", complains.get(allComplains)
+                                                , descriptions.get(allComplains), complainsProiorty.get(allComplains));
                                     }
+                                }
 
                                 //Admin option 2
                                 else if (adminMenuOption == 2) {
@@ -195,6 +181,7 @@ public class CilErp {
 
                                         System.out.println("ComplainID Is Missmatching or Incorrect, please try again\n........");
                                     }
+                                }
 
 
                                 //Admin option 3
@@ -225,6 +212,7 @@ public class CilErp {
 
                                         System.out.println("Try again, please enter Valid input example : 1,2,3,...,5");
                                     }
+                                }
 
 
                                 //extending
@@ -258,65 +246,58 @@ public class CilErp {
                                                     staff.add(staffAssign);
                                                     complainAssined.add(complainid);
                                                     comment.add("No-comment");
-                                                     System.out.printf("======sucessfully\nassigned staff:[%s] ---- to complain #[%s]\ngood luck to him\n", staffAssign, complainid);
+                                                    System.out.printf("======sucessfully\nassigned staff:[%s] ---- to complain #[%s]\ngood luck to him\n", staffAssign, complainid);
+                                                }
                                             }
-
-                                            else {
-
-                                                System.out.println("Try again, please enter Valid input example : 1,2,3,...,5");
-
-                                            }
-                                        }
-                                        else {
-
-                                            System.out.println("Try again, please enter Valid input example : 1,2,3,...,5");
-
-                                        }
 
                                             else {
                                                 System.out.println("try again");
 
                                             }
-                                            else if (staffAdminMenu == 2) {
-                                                System.out.println("===== staff complains =====");
-                                                 System.out.println(staffComplains);
-
-                                             }
                                         }
-                                        else {
-
-                                            System.out.println("Try again, please enter Valid input example : 1,2,3,...,5");
+                                        else if (staffAdminMenu == 2) {
+                                            System.out.println("===== staff complains =====");
+                                            System.out.println(staffComplains);
 
                                         }
                                     }
-
-                                    //Error Handling
                                     else {
-                                        System.out.println("Choose Valid option, try Again");
+
+                                        System.out.println("Try again, please enter Valid input example : 1,2,3,...,5");
 
                                     }
-                             }
+                                }
+                                //Admin option 5 - exit to main menu
+                                else if (adminMenuOption == 5) {
 
-                         }
+                                }
+                            }
 
-                     }
+                            //Error Handling
+                            else {
+                                System.out.println("Choose Valid option, try Again");
 
+                            }
+                        }
+
+                    }
+                }
 //==========================================================================================================
-                 else if (IndexOption == 3) {
-                     System.out.println("========== Support Staff");
-                     System.out.println("Enter name of staff, Remember to enter the correct spelling for example Name:[Fahad not same as fahad] ");
-                     String searchStaff = scannerBuffer.nextLine();
+                else if (IndexOption == 3) {
+                    System.out.println("========== Support Staff");
+                    System.out.println("Enter name of staff, Remember to enter the correct spelling for example Name:[Fahad not same as fahad] ");
+                    String searchStaff = scannerBuffer.nextLine();
 
-                     if (staff.contains(searchStaff)) {
+                    if (staff.contains(searchStaff)) {
 
 
-                         //menu
-                         System.out.print("Enter an option\n1: View complain\n2: Adding Comment\n3: Close Complain\n4: exit to Main Menu\n");
+                        //menu
+                        System.out.print("Enter an option\n1: View complain\n2: Adding Comment\n3: Close Complain\n4: exit to Main Menu\n");
 
-                         //handling Crash program
-                         if (scannerBuffer.hasNextInt()) {
+                        //handling Crash program
+                        if (scannerBuffer.hasNextInt()) {
 
-                              int staffMenu = Integer.parseInt(scannerBuffer.nextLine());
+                            int staffMenu = Integer.parseInt(scannerBuffer.nextLine());
                             if (staffMenu == 1) {
                                 System.out.println("===== My Assigned Complains =====");
                                 for (int loop = 0; loop < staff.size(); loop++) {
@@ -379,7 +360,6 @@ public class CilErp {
 //                                System.out.println("ID not found. Try again");}
 //
 //                        }
-//
 
                                 if (searchCloseComplain >= complains.size() || searchCloseComplain < 0) {
                                     System.out.println("Current Status: " + complainStatus.get(searchCloseComplain));
@@ -409,20 +389,36 @@ public class CilErp {
                         System.out.println("Try again");
 
                     }
+                }
+
 //==========================================================================================================
-                 else if (IndexOption == 4) {
+                else if (IndexOption == 4) {
 
 
-                     //closing program
-                     menuIsRunning = false;
-                     System.out.println("Goodbye!");
-                 }
-             }
+                    //closing program
+                    menuIsRunning = false;
+                    System.out.println("Goodbye!");
+                }
+            }
 //==========================================================================================================
 //  non existing input error handling
-             else {
-                 System.out.println("try again.");
-                 System.out.println("please enter invalid option ex: Input = 1,2,3,4.....,5");
-                 scannerBuffer.nextLine();
-             }
-         }
+            else {
+                System.out.println("try again.");
+                System.out.println("please enter invalid option ex: Input = 1,2,3,4.....,5");
+                scannerBuffer.nextLine();
+            }
+        }
+
+        scannerBuffer.close();
+    }
+}
+
+//Regarding complain status , New array list is been Added as new Input
+
+//When new ticket is added the Array list store its status to "Open"
+
+//Admin can change the status by calling the index and modifying the code.
+
+//extending the admin page, new hash map added in input of the program , they will store [Key: value] for support staff
+
+//support staff menu is located on admin option in the program
