@@ -77,6 +77,11 @@ public class Main {
             else if (choice == 5) {
                 service.viewHistory();
             }
+            else if (choice == 6) {
+                service.saveToFile();
+                System.out.println("Goodbye!");
+                break;
+            }
             else {
                 System.out.println("Invalid choice.");
             }
