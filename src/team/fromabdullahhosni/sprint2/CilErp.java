@@ -233,3 +233,14 @@ public class CilErp {
                                                 int staffIndexValue = complains.get(getIndex);
                                                 //checking for Non-existing complaints or Closed complaints .
                                                 if (complainid != staffIndexValue && complainStatus.equals("Closed") || complainid == staffIndexValue && complainStatus.equals("Closed")) {
+                                                    System.out.println("Try Again, this complain ID maybe closed or Non existing");
+                                                } else {
+                                                    System.out.printf("Ticket ID[%s]\n", complainid);
+                                                    System.out.println("enter the staff person you want to assign to .....>> ");
+                                                    String staffAssign = scannerBuffer.nextLine();
+
+                                                    staff.add(staffAssign);
+                                                    complainAssined.add(complainid);
+                                                    comment.add("No-comment");
+                                                    System.out.printf("======sucessfully\nassigned staff:[%s] ---- to complain #[%s]\ngood luck to him\n", staffAssign, complainid);
+                                                }
