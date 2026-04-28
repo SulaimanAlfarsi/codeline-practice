@@ -34,4 +34,22 @@ public class RentalService {
         return null;
     }
 
+    public void rentCar(String id) {
+        Car car = findCar(id);
+
+        if (car == null) {
+            System.out.println("Car not found.");
+            return;
+        }
+
+        if (car.isRented()) {
+            System.out.println("Car already rented.");
+            return;
+        }
+
+        car.rent();
+        System.out.println("Car rented successfully.");
+    }
+
+
 }
