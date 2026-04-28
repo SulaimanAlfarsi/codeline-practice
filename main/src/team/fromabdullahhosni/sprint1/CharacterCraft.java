@@ -1,4 +1,4 @@
-package team.fromabdullahhosni;
+package team.fromabdullahhosni.sprint1;
 
 /**
  * CharacterCraft - Demonstrates accessing a character at a specific index.
