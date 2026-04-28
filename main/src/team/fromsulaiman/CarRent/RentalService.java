@@ -77,7 +77,16 @@ public class RentalService {
         System.out.println("Car returned successfully.");
     }
 
+    public void viewHistory() {
+        if (history.isEmpty()) {
+            System.out.println("No rental history.");
+            return;
+        }
 
+        for (RentalRecord r : history) {
+            r.display();
+        }
+    }
 
 
 }
