@@ -300,6 +300,96 @@ public class CilErp {
                          //handling Crash program
                          if (scannerBuffer.hasNextInt()) {
 
-                             int staffMenu = Integer.parseInt(scannerBuffer.nextLine());
+                              int staffMenu = Integer.parseInt(scannerBuffer.nextLine());
+                            if (staffMenu == 1) {
+                                System.out.println("===== My Assigned Complains =====");
+                                for (int loop = 0; loop < staff.size(); loop++) {
+                                    // Check if the name matches (ignoring case is usually better)
+
+                                    if (staff.get(loop).equals(searchStaff)) {
+//                                System.out.println("\n--- Ticket Found ---");
+//                                System.out.println("ID: " + complainAssined.get(loop));
+//                                System.out.println("Name: " + staff.get(loop));
+//                                System.out.println("Comment: " + comment.get(loop));
+                                        System.out.printf("= Staff[%s] --- ComplainID[%d] --- comments:[\"%s\"] \n", staff.get(loop), complainAssined.get(loop), comment.get(loop));
+                                    } else {
+                                        System.out.printf("Staff %s is not been found, try again ", searchStaff);
+
+                                    }
+                                }
+                            } else if (staffMenu == 2) {
+                                System.out.println("===== Add/Modify a comment ======");
+                                System.out.print("Enter Complaint ID:\n");
+                                int searchId = Integer.parseInt(scannerBuffer.nextLine());
+                                for (int searchcomment = 0; searchcomment < complainAssined.size(); searchcomment++) {
+                                    if (complainAssined.get(searchcomment) == (searchId)) {
+
+                                        System.out.println("Current Comment: " + comment.get(searchcomment));
+
+
+                                        System.out.print("Enter the new comment: ");
+                                        String newComment = scannerBuffer.nextLine();
+
+
+                                        comment.set(searchcomment, newComment);
+
+                                        System.out.println("Update successful for " + staff.get(searchcomment) + "!");
+
+                                    } else {
+                                        System.out.println("ID not found. Try again");
+                                    }
+
+                                }
+                            } else if (staffMenu == 3) {
+                                System.out.println("===== Close Complains ======");
+                                System.out.print("Enter Complaint ID:\n");
+                                int searchCloseComplain = Integer.parseInt(scannerBuffer.nextLine());
+
+//                            if (.equals(searchId)) {
+//
+//                                System.out.println("Current Comment: " + comment.get(searchcomment));
+//
+//
+//                                System.out.print("Enter the new comment: ");
+//                                String newComment = scannerBuffer.nextLine();
+//
+//
+//                                comment.set(searchcomment, newComment);
+//
+//                                System.out.println("Update successful for " + staff.get(searchcomment) + "!");
+//
+//                            }
+//                            else {
+//                                System.out.println("ID not found. Try again");}
+//
+//                        }
+//
+
+                                if (searchCloseComplain >= complains.size() || searchCloseComplain < 0) {
+                                    System.out.println("Current Status: " + complainStatus.get(searchCloseComplain));
+
+                                    if (complainStatus.containsKey(searchCloseComplain) && complainStatus.containsValue("closed")) {
+                                        System.out.println("Sorry cannot change already closed complain");
+
+                                    } else {
+                                        complainStatus.replace(searchCloseComplain, "closed");
+                                        System.out.println("Sucessfully closed complain");
+                                        System.out.println("New Status: " + complainStatus.get(searchCloseComplain));
+                                    }
+                                } else {
+                                    System.out.println("Please type a vaild complain ID,try again");
+
+                                }
+
+                            }
+                            else {
+                                System.out.println("invaild option");
+
+                            }
+                        }
+                    }
+                    else {
+
+                        System.out.println("Try again");
 
                     }
