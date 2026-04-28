@@ -51,5 +51,22 @@ public class RentalService {
         System.out.println("Car rented successfully.");
     }
 
+    public void returnCar(String id) {
+        Car car = findCar(id);
+
+        if (car == null) {
+            System.out.println("Car not found.");
+            return;
+        }
+
+        if (!car.isRented()) {
+            System.out.println("Car is not rented.");
+            return;
+        }
+
+        car.returnCar();
+        System.out.println("Car returned successfully.");
+    }
+
 
 }
