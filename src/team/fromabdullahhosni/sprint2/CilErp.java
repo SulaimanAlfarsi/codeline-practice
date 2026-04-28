@@ -92,3 +92,14 @@ public class CilErp {
 
                                         System.out.print("choose the new status \"Low\" \"High\" \"Medium\" .....>\t");
                                         String chooseProiorty = scannerBuffer.nextLine();
+
+                                        //choosing priorty
+                                        if (chooseProiorty.equals("low") || chooseProiorty.equals("LOW")) {
+                                            complainsProiorty.add(proiorty[0]);
+                                        } else if (chooseProiorty.equals("High") || chooseProiorty.equals("HIGH")) {
+                                            complainsProiorty.add(proiorty[2]);
+                                        } else if (chooseProiorty.equals("medium") || chooseProiorty.equals("Medium")) {
+                                            complainsProiorty.add(proiorty[1]);
+                                        } else {
+                                            System.out.println("Something Went Wrong, please choose the right option or try again!");
+                                        }
