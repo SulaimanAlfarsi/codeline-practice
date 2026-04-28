@@ -15,4 +15,12 @@ public class Car {
     public String getModel() { return model; }
     public boolean isRented() { return isRented; }
 
+    public void rent() {
+        isRented = true;
+    }
+
+    public void returnCar() {
+        isRented = false;
+    }
+
 }
