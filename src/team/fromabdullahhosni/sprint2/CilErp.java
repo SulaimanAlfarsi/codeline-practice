@@ -263,6 +263,43 @@ public class CilErp {
                                             }
                                             else if (staffAdminMenu == 2) {
                                                 System.out.println("===== staff complains =====");
-                                                System.out.println(staffComplains);
+                                                 System.out.println(staffComplains);
 
-                                            }
+                                             }
+                                        }
+                                        else {
+
+                                            System.out.println("Try again, please enter Valid input example : 1,2,3,...,5");
+
+                                        }
+                                    }
+
+                                    //Error Handling
+                                    else {
+                                        System.out.println("Choose Valid option, try Again");
+
+                                    }
+                             }
+
+                         }
+
+                     }
+
+//==========================================================================================================
+                 else if (IndexOption == 3) {
+                     System.out.println("========== Support Staff");
+                     System.out.println("Enter name of staff, Remember to enter the correct spelling for example Name:[Fahad not same as fahad] ");
+                     String searchStaff = scannerBuffer.nextLine();
+
+                     if (staff.contains(searchStaff)) {
+
+
+                         //menu
+                         System.out.print("Enter an option\n1: View complain\n2: Adding Comment\n3: Close Complain\n4: exit to Main Menu\n");
+
+                         //handling Crash program
+                         if (scannerBuffer.hasNextInt()) {
+
+                             int staffMenu = Integer.parseInt(scannerBuffer.nextLine());
+
+                    }
