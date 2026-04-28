@@ -144,3 +144,8 @@ public class CilErp {
                             //handling Crash program
                             if (scannerBuffer.hasNextInt()) {
                                 int adminMenuOption = Integer.parseInt(scannerBuffer.nextLine());
+
+                                //Admin option 1
+                                if (adminMenuOption == 1) {
+
+                                    System.out.println("======== Report Of All Complains =========\n ");
