@@ -62,3 +62,8 @@ public class CilErp {
                                 int complainIndex = Integer.parseInt(scannerBuffer.nextLine());
                                 System.out.println("Enter the complain Description..>");
                                 String complainDescription = scannerBuffer.nextLine();
+
+                                //error handling
+                                if (complainDescription.isEmpty() || complainIndex == 0) {
+                                    System.out.println("please fill all options, try again!");
+                                } else {
