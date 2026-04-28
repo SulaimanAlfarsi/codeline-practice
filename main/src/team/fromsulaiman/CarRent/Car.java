@@ -11,4 +11,8 @@ public class Car {
         this.isRented = false;
     }
 
+    public String getId() { return id; }
+    public String getModel() { return model; }
+    public boolean isRented() { return isRented; }
+
 }
