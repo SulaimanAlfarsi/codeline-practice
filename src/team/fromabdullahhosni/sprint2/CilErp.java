@@ -393,3 +393,20 @@ public class CilErp {
                         System.out.println("Try again");
 
                     }
+//==========================================================================================================
+                 else if (IndexOption == 4) {
+
+
+                     //closing program
+                     menuIsRunning = false;
+                     System.out.println("Goodbye!");
+                 }
+             }
+//==========================================================================================================
+//  non existing input error handling
+             else {
+                 System.out.println("try again.");
+                 System.out.println("please enter invalid option ex: Input = 1,2,3,4.....,5");
+                 scannerBuffer.nextLine();
+             }
+         }
