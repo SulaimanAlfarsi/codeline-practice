@@ -23,7 +23,8 @@ public class Car {
     }
 
     public void returnCar() {
-        isRented = false;
+        this.isRented = false;
+        this.customerName = null;
     }
 
     public void displayInfo() {
