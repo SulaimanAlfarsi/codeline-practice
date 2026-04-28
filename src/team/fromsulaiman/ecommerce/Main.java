@@ -36,6 +36,10 @@ public class Main {
                 else if (choice == 3) {
                     System.out.println("Total: " + cart.getTotal());
                 }
+                else if (choice == 4) {
+                    System.out.println("Goodbye!");
+                    break;
+                }
 
 
             }
