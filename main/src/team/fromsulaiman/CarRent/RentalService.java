@@ -44,6 +44,7 @@ public class RentalService {
 
     public void rentCar(String id, String customerName) {
         Car car = findCar(id);
+        history.add(new RentalRecord(id, customerName));
 
         if (car == null) {
             System.out.println("Car not found.");
