@@ -25,4 +25,13 @@ public class RentalService {
         }
     }
 
+    public Car findCar(String id) {
+        for (Car car : cars) {
+            if (car.getId().equalsIgnoreCase(id)) {
+                return car;
+            }
+        }
+        return null;
+    }
+
 }
