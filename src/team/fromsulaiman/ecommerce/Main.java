@@ -7,6 +7,19 @@ public class Main {
             Cart cart = new Cart();
             Scanner scanner = new Scanner(System.in);
 
+            while (true) {
+                System.out.println("\n1. Add Product");
+                System.out.println("2. View Cart");
+                System.out.println("3. Total");
+                System.out.println("4. Exit");
+                System.out.print("Choose: ");
+
+                int choice = scanner.nextInt();
+                scanner.nextLine();
+
+
+            }
+
 
         }
 }
