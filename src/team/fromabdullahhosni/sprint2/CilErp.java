@@ -225,3 +225,5 @@ public class CilErp {
                                         if (staffAdminMenu == 1) {
                                             System.out.println("enter the complain Id example[Complain Id: 8868] .....>> ");
                                             int complainid = Integer.parseInt(scannerBuffer.nextLine());
+                                            //error handling if the user enters the wronge id
+                                            if (complainid >= complains.size() || complainid < 0) {
