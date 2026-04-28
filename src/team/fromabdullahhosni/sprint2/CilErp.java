@@ -227,3 +227,7 @@ public class CilErp {
                                             int complainid = Integer.parseInt(scannerBuffer.nextLine());
                                             //error handling if the user enters the wronge id
                                             if (complainid >= complains.size() || complainid < 0) {
+//                                System.out.println("try again");
+                                                //get a particular report
+                                                int getIndex = complains.indexOf(complainid);
+                                                int staffIndexValue = complains.get(getIndex);
