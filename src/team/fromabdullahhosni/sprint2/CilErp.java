@@ -149,3 +149,10 @@ public class CilErp {
                                 if (adminMenuOption == 1) {
 
                                     System.out.println("======== Report Of All Complains =========\n ");
+
+                                    //Printing ALL Complains Tickets
+                                    for (int allComplains = 0; allComplains < complains.size(); allComplains++) {
+
+                                        System.out.printf("# --- Id[%d]\tDescription[%s]\tProiorty[%s]\n", complains.get(allComplains)
+                                                , descriptions.get(allComplains), complainsProiorty.get(allComplains));
+                                    }
