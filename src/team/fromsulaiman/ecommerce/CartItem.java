@@ -8,4 +8,13 @@ public class CartItem {
         this.product = product;
         this.quantity = quantity;
     }
+
+    public Product getProduct() {
+        return product;
+    }
+
+    public int getQuantity() {
+        return quantity;
+    }
+
 }
