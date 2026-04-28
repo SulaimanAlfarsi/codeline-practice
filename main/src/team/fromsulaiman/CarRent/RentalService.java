@@ -5,6 +5,7 @@ import java.util.ArrayList;
 public class RentalService {
 
     private ArrayList<Car> cars = new ArrayList<>();
+    private ArrayList<RentalRecord> history = new ArrayList<>();
 
     public void addCar(Car car) {
         if (car == null) {
