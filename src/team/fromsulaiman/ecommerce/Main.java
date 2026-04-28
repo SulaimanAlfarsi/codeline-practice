@@ -7,6 +7,19 @@ public class Main {
             Cart cart = new Cart();
             Scanner scanner = new Scanner(System.in);
 
+            String name;
+
+            while (true) {
+                System.out.print("Name: ");
+                name = scanner.nextLine();
+
+                if (name.trim().isEmpty()) {
+                    System.out.println("Name cannot be empty.");
+                } else {
+                    break;
+                }
+            }
+
             while (true) {
                 System.out.println("\n1. Add Product");
                 System.out.println("2. View Cart");
