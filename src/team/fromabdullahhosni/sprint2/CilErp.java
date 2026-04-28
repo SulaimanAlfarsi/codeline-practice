@@ -131,6 +131,8 @@ public class CilErp {
 //Admin can change the status by calling the index and modifying the code.
 
 //extending the admin page, new hash map added in input of the program , they will store [Key: value] for support staff
+
+//support staff menu is located on admin option in the program
 //==========================================================================================================
                 else if (IndexOption == 2) {
                     //!!!!!!!!
