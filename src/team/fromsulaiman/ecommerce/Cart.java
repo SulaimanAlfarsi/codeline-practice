@@ -21,4 +21,15 @@ public class Cart {
         }
     }
 
+    public double getTotal() {
+        double total = 0;
+
+        for (CartItem item : items) {
+            total += item.getProduct().getPrice() * item.getQuantity();
+        }
+
+        return total;
+    }
+
+
 }
