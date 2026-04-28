@@ -14,6 +14,18 @@ public class Main {
             System.out.println("4. Return Car");
             System.out.println("5. Exit");
             System.out.print("Choose: ");
+
+            int choice;
+
+            try {
+                choice = scanner.nextInt();
+                scanner.nextLine();
+            } catch (Exception e) {
+                System.out.println("Invalid input.");
+                scanner.nextLine();
+                continue;
+            }
+
         }
     }
 }
