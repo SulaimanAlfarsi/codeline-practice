@@ -11,7 +11,14 @@ public class RentalService {
             System.out.println("Invalid car.");
             return;
         }
+
+        if (findCar(car.getId()) != null) {
+            System.out.println("Car ID already exists.");
+            return;
+        }
+
         cars.add(car);
+        System.out.println("Car added successfully.");
     }
 
     public void viewCars() {
@@ -67,6 +74,8 @@ public class RentalService {
         car.returnCar();
         System.out.println("Car returned successfully.");
     }
+
+
 
 
 }
