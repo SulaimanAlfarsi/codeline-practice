@@ -71,6 +71,9 @@ public class Main {
                 System.out.println("Goodbye!");
                 break;
             }
+            else {
+                System.out.println("Invalid choice.");
+            }
 
         }
     }
