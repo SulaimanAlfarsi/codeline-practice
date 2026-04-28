@@ -127,6 +127,8 @@ public class CilErp {
 //Regarding complain status , New array list is been Added as new Input
 
 //When new ticket is added the Array list store its status to "Open"
+
+//Admin can change the status by calling the index and modifying the code.
 //==========================================================================================================
                 else if (IndexOption == 2) {
                     //!!!!!!!!
