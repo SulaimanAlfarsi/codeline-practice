@@ -179,3 +179,10 @@ public class CilErp {
 
                                         System.out.println("ComplainID Is Missmatching or Incorrect, please try again\n........");
                                     }
+
+
+                                //Admin option 3
+                                else if (adminMenuOption == 3) {
+
+                                    System.out.println("========== Closing complain");
+                                    System.out.println("Enter the complain Id Example[ComplainID: 8868]");
