@@ -70,3 +70,7 @@ public class CilErp {
                                     //processing - Adding complains
                                     complains.add(complainIndex);
                                     descriptions.add(complainDescription);
+                                    complainsProiorty.add(proiorty[1]);
+                                    //adding complain status
+                                    complainStatus.put(complainIndex, "Open");
+                                    System.out.println("Successfully added");
