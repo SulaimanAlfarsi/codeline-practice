@@ -77,6 +77,26 @@ public class Main {
                 }
                 scanner.nextLine();
 
+                int qty;
+
+                while (true) {
+                    System.out.print("Quantity: ");
+                    try {
+                        qty = scanner.nextInt();
+
+                        if (qty <= 0) {
+                            System.out.println("Quantity must be greater than 0.");
+                            continue;
+                        }
+
+                        break;
+
+                    } catch (Exception e) {
+                        System.out.println("Invalid number.");
+                        scanner.nextLine();
+                    }
+                }
+                scanner.nextLine();
             }
 
         }
