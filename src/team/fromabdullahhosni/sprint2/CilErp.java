@@ -243,7 +243,19 @@ public class CilErp {
                                                     complainAssined.add(complainid);
                                                     comment.add("No-comment");
                                                      System.out.printf("======sucessfully\nassigned staff:[%s] ---- to complain #[%s]\ngood luck to him\n", staffAssign, complainid);
-                                                 }
+                                            }
+
+                                            else {
+
+                                                System.out.println("Try again, please enter Valid input example : 1,2,3,...,5");
+
+                                            }
+                                        }
+                                        else {
+
+                                            System.out.println("Try again, please enter Valid input example : 1,2,3,...,5");
+
+                                        }
 
                                             else {
                                                 System.out.println("try again");
