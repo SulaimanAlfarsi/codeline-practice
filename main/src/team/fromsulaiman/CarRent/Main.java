@@ -12,8 +12,8 @@ public class Main {
             System.out.println("2. View Cars");
             System.out.println("3. Rent Car");
             System.out.println("4. Return Car");
-            System.out.println("5. Exit");
-            System.out.print("Choose: ");
+            System.out.println("5. View History");
+            System.out.println("6. Exit");
 
             int choice;
 
