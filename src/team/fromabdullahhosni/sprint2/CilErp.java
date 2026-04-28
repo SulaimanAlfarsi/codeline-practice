@@ -50,3 +50,7 @@ public class CilErp {
                     //handling Crash program
                     if (scannerBuffer.hasNextInt()) {
                         int customerIndex = Integer.parseInt(scannerBuffer.nextLine());
+
+
+                        if (customerIndex == 1) {
+                            System.out.println("Enter the complain ID..>");
