@@ -1,7 +1,10 @@
 package team.fromsulaiman.CarRent;
+import java.util.Scanner;
+
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Car Rental System");
+        RentalService service = new RentalService();
+        Scanner scanner = new Scanner(System.in);
     }
 }
