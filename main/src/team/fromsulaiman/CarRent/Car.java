@@ -23,4 +23,8 @@ public class Car {
         isRented = false;
     }
 
+    public void displayInfo() {
+        System.out.println(id + " | " + model + " | " + (isRented ? "Rented" : "Available"));
+    }
+
 }
