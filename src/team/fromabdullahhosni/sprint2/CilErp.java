@@ -8,3 +8,7 @@ public class CilErp {
     public static void main(String[] args) {
 //  Implemeting a scanner
         Scanner scannerBuffer = new Scanner(System.in);
+
+//Input Storing
+        ArrayList<Integer> complains = new ArrayList<Integer>();
+        ArrayList<String> descriptions = new ArrayList<String>();
