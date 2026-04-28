@@ -32,4 +32,8 @@ public class Car {
         System.out.println(id + " | " + model + " | " + status);
     }
 
+    public String getCustomerName() {
+        return customerName;
+    }
+
 }

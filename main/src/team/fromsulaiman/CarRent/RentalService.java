@@ -48,7 +48,6 @@ public class RentalService {
 
     public void rentCar(String id, String customerName) {
         Car car = findCar(id);
-        history.add(new RentalRecord(id, customerName));
 
         if (car == null) {
             System.out.println("Car not found.");
@@ -61,6 +60,8 @@ public class RentalService {
         }
 
         car.rent(customerName);
+        history.add(new RentalRecord(id, customerName));
+
         System.out.println("Car rented to " + customerName);
     }
 
@@ -96,7 +97,13 @@ public class RentalService {
         try (FileWriter writer = new FileWriter("data.txt")) {
 
             for (Car car : cars) {
-                writer.write(car.getId() + "," + car.getModel() + "," + car.isRented() + "\n");
+                writer.write(
+                        car.getId() + "," +
+                                car.getModel() + "," +
+                                car.isRented() + "," +
+                                (car.isRented() ? car.getCustomerName() : "null") +
+                                "\n"
+                );
             }
 
         } catch (IOException e) {
@@ -113,7 +120,15 @@ public class RentalService {
 
             while (sc.hasNextLine()) {
                 String[] parts = sc.nextLine().split(",");
-                cars.add(new Car(parts[0], parts[1]));
+
+                Car car = new Car(parts[0], parts[1]);
+
+                if (parts.length > 2 && Boolean.parseBoolean(parts[2])) {
+                    String customer = parts[3];
+                    car.rent(customer);
+                }
+
+                cars.add(car);
             }
 
         } catch (Exception e) {
