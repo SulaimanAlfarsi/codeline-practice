@@ -2,6 +2,8 @@ package team.fromsulaiman.CarRent;
 import java.util.ArrayList;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.io.*;
+import java.util.Scanner;
 
 
 public class RentalService {
@@ -102,5 +104,21 @@ public class RentalService {
         }
     }
 
+    public void loadFromFile() {
+        try {
+            File file = new File("data.txt");
+            if (!file.exists()) return;
+
+            Scanner sc = new Scanner(file);
+
+            while (sc.hasNextLine()) {
+                String[] parts = sc.nextLine().split(",");
+                cars.add(new Car(parts[0], parts[1]));
+            }
+
+        } catch (Exception e) {
+            System.out.println("Error loading file.");
+        }
+    }
 
 }
