@@ -221,3 +221,7 @@ public class CilErp {
                                     if (scannerBuffer.hasNextInt()) {
 
                                         int staffAdminMenu = Integer.parseInt(scannerBuffer.nextLine());
+
+                                        if (staffAdminMenu == 1) {
+                                            System.out.println("enter the complain Id example[Complain Id: 8868] .....>> ");
+                                            int complainid = Integer.parseInt(scannerBuffer.nextLine());
