@@ -54,6 +54,9 @@ public class Main {
 
                 service.addCar(new Car(id, model));
             }
+            else if (choice == 2) {
+                service.viewCars();
+            }
 
         }
     }
