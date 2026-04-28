@@ -242,5 +242,10 @@ public class CilErp {
                                                     staff.add(staffAssign);
                                                     complainAssined.add(complainid);
                                                     comment.add("No-comment");
-                                                    System.out.printf("======sucessfully\nassigned staff:[%s] ---- to complain #[%s]\ngood luck to him\n", staffAssign, complainid);
-                                                }
+                                                     System.out.printf("======sucessfully\nassigned staff:[%s] ---- to complain #[%s]\ngood luck to him\n", staffAssign, complainid);
+                                                 }
+
+                                            else {
+                                                System.out.println("try again");
+
+                                            }
