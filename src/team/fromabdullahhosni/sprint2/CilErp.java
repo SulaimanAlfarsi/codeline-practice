@@ -128,3 +128,13 @@ public class CilErp {
                     //++++++++++++++++++++++
                     System.out.println("========= Admin Login ");
                     System.out.println("Please Enter the Admin Pin to Login");
+
+                    //handling Crash program
+                    if (scannerBuffer.hasNextInt()) {
+                        int adminPinIndex = Integer.parseInt(scannerBuffer.nextLine());
+
+                        if (adminPinIndex != adminPIN) {
+
+                            System.out.println("Invaid Pin\t\t\t No Access Granted! try Again");
+                        }
+                        else {
