@@ -14,8 +14,16 @@ public class Main {
                 System.out.println("4. Exit");
                 System.out.print("Choose: ");
 
-                int choice = scanner.nextInt();
-                scanner.nextLine();
+                int choice;
+
+                try {
+                    choice = scanner.nextInt();
+                    scanner.nextLine();
+                } catch (Exception e) {
+                    System.out.println("Invalid input! Please enter a number.");
+                    scanner.nextLine();
+                    continue;
+                }
 
                 if (choice == 1) {
                     System.out.print("Name: ");
