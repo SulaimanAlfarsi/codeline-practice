@@ -161,3 +161,16 @@ public class CilErp {
                                 else if (adminMenuOption == 2) {
 
                                     System.out.println("Complain Search --\t\tEnter ComplainID example[Complain ID:6685] ..>");
+
+                                    //handling Crash program
+                                    if (scannerBuffer.hasNextInt()) {
+                                        int searchComplain = Integer.parseInt(scannerBuffer.nextLine());
+                                        int searchComplainIndex = complains.indexOf(searchComplain);
+
+                                        if (searchComplainIndex != -1) {
+
+                                            System.out.printf("Ticket #[%s] Details\n: ", searchComplain);
+                                            System.out.println("description:" + descriptions.get(searchComplainIndex));
+                                            System.out.println("Proiorty: " + complainsProiorty.get(searchComplainIndex));
+                                        }
+                                    }
