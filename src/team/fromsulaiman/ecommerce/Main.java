@@ -1,7 +1,12 @@
 package fromsulaiman.ecommerce;
+import java.util.Scanner;
+
 
 public class Main {
         public static void main(String[] args) {
-            System.out.println("E-Commerce Cart Started");
+            Cart cart = new Cart();
+            Scanner scanner = new Scanner(System.in);
+
+
         }
 }
