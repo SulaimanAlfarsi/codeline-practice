@@ -41,7 +41,7 @@ public class RentalService {
         return null;
     }
 
-    public void rentCar(String id) {
+    public void rentCar(String id, String customerName) {
         Car car = findCar(id);
 
         if (car == null) {
@@ -54,8 +54,8 @@ public class RentalService {
             return;
         }
 
-        car.rent();
-        System.out.println("Car rented successfully.");
+        car.rent(customerName);
+        System.out.println("Car rented to " + customerName);
     }
 
     public void returnCar(String id) {
