@@ -1,50 +1,36 @@
 package fromsulaiman.ecommerce;
+
 import java.util.Scanner;
 
-
 public class Main {
-        public static void main(String[] args) {
-            Cart cart = new Cart();
-            Scanner scanner = new Scanner(System.in);
 
+    public static void main(String[] args) {
 
+        Cart cart = new Cart();
+        Scanner scanner = new Scanner(System.in);
 
-            while (true) {
-                System.out.println("\n1. Add Product");
-                System.out.println("2. View Cart");
-                System.out.println("3. Total");
-                System.out.println("4. Exit");
-                System.out.print("Choose: ");
+        while (true) {
 
-                int choice;
+            System.out.println("\n1. Add Product");
+            System.out.println("2. View Cart");
+            System.out.println("3. Total");
+            System.out.println("4. Exit");
+            System.out.print("Choose: ");
 
-                try {
-                    choice = scanner.nextInt();
-                    scanner.nextLine();
-                } catch (Exception e) {
-                    System.out.println("Invalid input! Please enter a number.");
-                    scanner.nextLine();
-                    continue;
-                }
+            int choice;
 
-                if (choice == 1) {
+            try {
+                choice = scanner.nextInt();
+                scanner.nextLine();
+            } catch (Exception e) {
+                System.out.println("Invalid input! Please enter a number.");
+                scanner.nextLine();
+                continue;
+            }
 
-                }
-                else if (choice == 2) {
+            if (choice == 1) {
 
-                }
-                else if (choice == 3) {
-
-                }
-                else if (choice == 4) {
-                    System.out.println("Goodbye!");
-                    break;
-                }
-                else {
-                    System.out.println("Invalid choice");
-                }
                 String name;
-
                 while (true) {
                     System.out.print("Name: ");
                     name = scanner.nextLine();
@@ -57,7 +43,6 @@ public class Main {
                 }
 
                 double price;
-
                 while (true) {
                     System.out.print("Price: ");
                     try {
@@ -78,7 +63,6 @@ public class Main {
                 scanner.nextLine();
 
                 int qty;
-
                 while (true) {
                     System.out.print("Quantity: ");
                     try {
@@ -97,7 +81,22 @@ public class Main {
                     }
                 }
                 scanner.nextLine();
-            }
 
+                cart.addItem(new Product(name, price), qty);
+
+            } else if (choice == 2) {
+                cart.viewCart();
+
+            } else if (choice == 3) {
+                System.out.println("Total: " + cart.getTotal());
+
+            } else if (choice == 4) {
+                System.out.println("Goodbye!");
+                break;
+
+            } else {
+                System.out.println("Invalid choice");
+            }
         }
+    }
 }
