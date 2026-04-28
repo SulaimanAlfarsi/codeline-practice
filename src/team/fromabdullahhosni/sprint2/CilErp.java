@@ -87,3 +87,5 @@ public class CilErp {
                                     if (changeProiorty.equals("y") || changeProiorty.equals("Y") || changeProiorty.equals("yes") || changeProiorty.equals("YES")) {
                                         System.out.printf("ComplainID\t\t %s\n", complains.get(currentComplain));
                                         System.out.printf("Current status : [%s]\n", complainsProiorty.get(currentComplain));
+                                        //removing old one
+                                        complainsProiorty.remove(currentComplain);
