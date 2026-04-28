@@ -103,3 +103,11 @@ public class CilErp {
                                         } else {
                                             System.out.println("Something Went Wrong, please choose the right option or try again!");
                                         }
+                                        System.out.println("Successfully ");
+                                    } else {
+                                        System.out.println("try again, please these options  y/yes : n/no\n");
+                                    }
+                                }
+                            }
+                        }
+                    }
