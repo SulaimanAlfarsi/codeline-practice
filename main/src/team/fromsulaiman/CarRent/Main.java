@@ -67,6 +67,10 @@ public class Main {
                 String id = scanner.nextLine();
                 service.returnCar(id);
             }
+            else if (choice == 5) {
+                System.out.println("Goodbye!");
+                break;
+            }
 
         }
     }
