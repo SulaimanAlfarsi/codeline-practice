@@ -26,6 +26,35 @@ public class Main {
                 continue;
             }
 
+            if (choice == 1) {
+
+                String id;
+                while (true) {
+                    System.out.print("Car ID: ");
+                    id = scanner.nextLine();
+
+                    if (id.trim().isEmpty()) {
+                        System.out.println("ID cannot be empty.");
+                    } else {
+                        break;
+                    }
+                }
+
+                String model;
+                while (true) {
+                    System.out.print("Model: ");
+                    model = scanner.nextLine();
+
+                    if (model.trim().isEmpty()) {
+                        System.out.println("Model cannot be empty.");
+                    } else {
+                        break;
+                    }
+                }
+
+                service.addCar(new Car(id, model));
+            }
+
         }
     }
 }
