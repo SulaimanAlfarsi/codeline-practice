@@ -38,6 +38,12 @@ public class Main {
             System.out.print("Choose option number: ");
             String input = scanner.nextLine();
 
+            if (input.trim().isEmpty()) {
+                System.out.println("Answer cannot be empty.");
+                System.out.println();
+                continue;
+            }
+
             int answerNumber = Integer.parseInt(input);
             String selectedAnswer = question.getOptions().get(answerNumber - 1);
 
