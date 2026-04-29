@@ -9,4 +9,12 @@ public class Question {
         this.correctAnswer = correctAnswer;
     }
 
+    public String getQuestionText() {
+        return questionText;
+    }
+
+    public String getCorrectAnswer() {
+        return correctAnswer;
+    }
+
 }
