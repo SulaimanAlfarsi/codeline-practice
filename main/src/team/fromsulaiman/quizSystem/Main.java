@@ -54,6 +54,12 @@ public class Main {
                 continue;
             }
 
+            if (answerNumber < 1 || answerNumber > question.getOptions().size()) {
+                System.out.println("Please choose a number between 1 and " + question.getOptions().size());
+                System.out.println();
+                continue;
+            }
+
             String selectedAnswer = question.getOptions().get(answerNumber - 1);
 
             if (selectedAnswer.equalsIgnoreCase(question.getCorrectAnswer())) {
