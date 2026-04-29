@@ -1,4 +1,4 @@
-package team.fromabdullahhosni;
+package team.fromabdullahhosni.sprint1;
 
 /**
  * ModuloMagic - Demonstrates the modulo operator to find remainders.
