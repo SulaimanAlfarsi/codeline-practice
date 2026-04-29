@@ -1,6 +1,7 @@
 package team.fromsulaiman.quizSystem.model;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class Quiz {
@@ -13,6 +14,10 @@ public class Quiz {
 
     public void addQuestion(Question question) {
         questions.add(question);
+    }
+
+    public void shuffleQuestions() {
+        Collections.shuffle(questions);
     }
 
     public List<Question> getQuestions() {
