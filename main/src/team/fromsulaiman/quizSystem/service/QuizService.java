@@ -16,9 +16,9 @@ public class QuizService {
 
             int answerNumber = InputUtil.getValidOption(scanner, question.getOptions().size());
 
-            String selectedAnswer = question.getOptions().get(answerNumber - 1);
 
-            if (selectedAnswer.equalsIgnoreCase(question.getCorrectAnswer())) {
+
+            if (question.isCorrect(answerNumber)) {
                 System.out.println("Correct!");
                 score++;
             } else {
