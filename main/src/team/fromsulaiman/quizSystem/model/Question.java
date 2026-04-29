@@ -8,8 +8,9 @@ public class Question {
     private String correctAnswer;
     private List<String> options;
 
-    public Question(String questionText, String correctAnswer) {
+    public Question(String questionText, List<String> options, String correctAnswer) {
         this.questionText = questionText;
+        this.options = options;
         this.correctAnswer = correctAnswer;
     }
 
