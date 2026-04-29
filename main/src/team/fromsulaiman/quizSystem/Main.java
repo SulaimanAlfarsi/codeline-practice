@@ -44,7 +44,16 @@ public class Main {
                 continue;
             }
 
-            int answerNumber = Integer.parseInt(input);
+            int answerNumber;
+
+            try {
+                answerNumber = Integer.parseInt(input);
+            } catch (NumberFormatException e) {
+                System.out.println("Please enter a valid number.");
+                System.out.println();
+                continue;
+            }
+
             String selectedAnswer = question.getOptions().get(answerNumber - 1);
 
             if (selectedAnswer.equalsIgnoreCase(question.getCorrectAnswer())) {
