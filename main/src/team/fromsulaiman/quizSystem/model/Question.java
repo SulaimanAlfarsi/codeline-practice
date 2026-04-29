@@ -14,6 +14,14 @@ public class Question {
         this.correctAnswer = correctAnswer;
     }
 
+    public void display() {
+        System.out.println(questionText);
+
+        for (int i = 0; i < options.size(); i++) {
+            System.out.println((i + 1) + ". " + options.get(i));
+        }
+    }
+
     public String getQuestionText() {
         return questionText;
     }
