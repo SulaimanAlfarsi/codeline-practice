@@ -1,4 +1,5 @@
 package team.fromsulaiman.quizSystem.service;
+import team.fromsulaiman.quizSystem.util.InputUtil;
 
 import team.fromsulaiman.quizSystem.model.Question;
 import team.fromsulaiman.quizSystem.model.Quiz;
@@ -13,32 +14,7 @@ public class QuizService {
         for (Question question : quiz.getQuestions()) {
             question.display();
 
-            int answerNumber = 0;
-            boolean validInput = false;
-
-            while (!validInput) {
-                System.out.print("Choose option number: ");
-                String input = scanner.nextLine();
-
-                if (input.trim().isEmpty()) {
-                    System.out.println("Answer cannot be empty.");
-                    continue;
-                }
-
-                try {
-                    answerNumber = Integer.parseInt(input);
-                } catch (NumberFormatException e) {
-                    System.out.println("Please enter a valid number.");
-                    continue;
-                }
-
-                if (answerNumber < 1 || answerNumber > question.getOptions().size()) {
-                    System.out.println("Please choose a number between 1 and " + question.getOptions().size());
-                    continue;
-                }
-
-                validInput = true;
-            }
+            int answerNumber = InputUtil.getValidOption(scanner, question.getOptions().size());
 
             String selectedAnswer = question.getOptions().get(answerNumber - 1);
 
