@@ -11,6 +11,7 @@ public class Main {
     public static void main(String[] args) {
 
         Scanner scanner = new Scanner(System.in);
+        int score = 0;
 
         System.out.println("=== Welcome to Quiz System ===");
 
@@ -40,6 +41,8 @@ public class Main {
             System.out.println("You entered: " + answer);
             System.out.println();
         }
+
+        System.out.println("Score: " + score);
 
         scanner.close();
     }
