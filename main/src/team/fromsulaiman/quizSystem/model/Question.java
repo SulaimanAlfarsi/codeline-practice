@@ -1,8 +1,12 @@
 package team.fromsulaiman.quizSystem.model;
 
+import java.util.List;
+
 public class Question {
-    String questionText;
-    String correctAnswer;
+
+    private String questionText;
+    private String correctAnswer;
+    private List<String> options;
 
     public Question(String questionText, String correctAnswer) {
         this.questionText = questionText;
@@ -17,4 +21,7 @@ public class Question {
         return correctAnswer;
     }
 
+    public List<String> getOptions() {
+        return options;
+    }
 }
