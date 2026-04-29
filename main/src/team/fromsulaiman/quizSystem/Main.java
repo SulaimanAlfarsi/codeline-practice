@@ -32,6 +32,9 @@ public class Main {
         quiz.addQuestion(q2);
 
         QuizService quizService = new QuizService();
+
+        quiz.shuffleQuestions();
+
         quizService.startQuiz(quiz, scanner);
 
         scanner.close();
