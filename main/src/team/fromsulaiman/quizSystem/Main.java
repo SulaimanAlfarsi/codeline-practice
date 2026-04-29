@@ -31,7 +31,10 @@ public class Main {
         quiz.addQuestion(q1);
         quiz.addQuestion(q2);
 
-        System.out.println("Quiz created with " + quiz.getQuestions().size() + " questions.");
+        for (Question question : quiz.getQuestions()) {
+            question.display();
+            System.out.println();
+        }
 
         scanner.close();
     }
