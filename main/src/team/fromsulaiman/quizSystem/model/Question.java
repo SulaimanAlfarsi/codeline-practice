@@ -33,4 +33,9 @@ public class Question {
     public List<String> getOptions() {
         return options;
     }
+
+    public boolean isCorrect(int answerIndex) {
+        String selected = options.get(answerIndex - 1);
+        return selected.equalsIgnoreCase(correctAnswer);
+    }
 }
