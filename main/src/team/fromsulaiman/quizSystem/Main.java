@@ -38,7 +38,14 @@ public class Main {
             System.out.print("Your answer: ");
             String answer = scanner.nextLine();
 
-            System.out.println("You entered: " + answer);
+            if (answer.equalsIgnoreCase(question.getCorrectAnswer())) {
+                System.out.println("Correct!");
+                score++;
+            } else {
+                System.out.println("Wrong!");
+                System.out.println("Correct answer: " + question.getCorrectAnswer());
+            }
+
             System.out.println();
         }
 
