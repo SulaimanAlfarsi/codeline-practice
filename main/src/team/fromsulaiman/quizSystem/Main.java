@@ -33,9 +33,21 @@ public class Main {
 
         QuizService quizService = new QuizService();
 
-        quiz.shuffleQuestions();
+        boolean playAgain = true;
 
-        quizService.startQuiz(quiz, scanner);
+        while (playAgain) {
+            quiz.shuffleQuestions();
+            quizService.startQuiz(quiz, scanner);
+
+            System.out.print("Do you want to play again? (yes/no): ");
+            String answer = scanner.nextLine();
+
+            if (!answer.equalsIgnoreCase("yes")) {
+                playAgain = false;
+            }
+        }
+
+        System.out.println("Thank you for playing!");
 
         scanner.close();
     }
