@@ -49,9 +49,9 @@ public class Main {
             System.out.println();
         }
 
-        System.out.println("Score: " + score);
+        System.out.println("=== Quiz Finished ===");
+        System.out.println("Your final score: " + score + "/" + quiz.getQuestions().size());
 
         scanner.close();
     }
-
 }
