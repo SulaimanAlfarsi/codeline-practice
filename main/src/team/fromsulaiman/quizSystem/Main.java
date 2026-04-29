@@ -3,6 +3,7 @@ package team.fromsulaiman.quizSystem;
 import team.fromsulaiman.quizSystem.model.Question;
 import team.fromsulaiman.quizSystem.model.Quiz;
 import team.fromsulaiman.quizSystem.service.QuizService;
+import team.fromsulaiman.quizSystem.util.InputUtil;
 
 import java.util.Arrays;
 import java.util.Scanner;
@@ -39,12 +40,7 @@ public class Main {
             quiz.shuffleQuestions();
             quizService.startQuiz(quiz, scanner);
 
-            System.out.print("Do you want to play again? (yes/no): ");
-            String answer = scanner.nextLine();
-
-            if (!answer.equalsIgnoreCase("yes")) {
-                playAgain = false;
-            }
+            playAgain = InputUtil.askYesNo(scanner, "Do you want to play again? (yes/no): ");
         }
 
         System.out.println("Thank you for playing!");
