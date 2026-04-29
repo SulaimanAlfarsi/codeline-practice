@@ -36,9 +36,9 @@ public class Main {
             question.display();
 
             System.out.print("Choose option number: ");
-            int answerNumber = scanner.nextInt();
-            scanner.nextLine();
+            String input = scanner.nextLine();
 
+            int answerNumber = Integer.parseInt(input);
             String selectedAnswer = question.getOptions().get(answerNumber - 1);
 
             if (selectedAnswer.equalsIgnoreCase(question.getCorrectAnswer())) {
