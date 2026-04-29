@@ -35,4 +35,25 @@ public class InputUtil {
 
         return answerNumber;
     }
+    public static boolean askYesNo(Scanner scanner, String message) {
+        while (true) {
+            System.out.print(message);
+            String input = scanner.nextLine();
+
+            if (input.trim().isEmpty()) {
+                System.out.println("Input cannot be empty.");
+                continue;
+            }
+
+            if (input.equalsIgnoreCase("yes")) {
+                return true;
+            }
+
+            if (input.equalsIgnoreCase("no")) {
+                return false;
+            }
+
+            System.out.println("Please enter yes or no.");
+        }
+    }
 }
