@@ -33,6 +33,11 @@ public class Main {
 
         for (Question question : quiz.getQuestions()) {
             question.display();
+
+            System.out.print("Your answer: ");
+            String answer = scanner.nextLine();
+
+            System.out.println("You entered: " + answer);
             System.out.println();
         }
 
