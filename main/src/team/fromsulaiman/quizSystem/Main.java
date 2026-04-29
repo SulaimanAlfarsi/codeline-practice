@@ -35,29 +35,31 @@ public class Main {
         for (Question question : quiz.getQuestions()) {
             question.display();
 
-            System.out.print("Choose option number: ");
-            String input = scanner.nextLine();
+            int answerNumber = 0;
+            boolean validInput = false;
 
-            if (input.trim().isEmpty()) {
-                System.out.println("Answer cannot be empty.");
-                System.out.println();
-                continue;
-            }
+            while (!validInput) {
+                System.out.print("Choose option number: ");
+                String input = scanner.nextLine();
 
-            int answerNumber;
+                if (input.trim().isEmpty()) {
+                    System.out.println("Answer cannot be empty.");
+                    continue;
+                }
 
-            try {
-                answerNumber = Integer.parseInt(input);
-            } catch (NumberFormatException e) {
-                System.out.println("Please enter a valid number.");
-                System.out.println();
-                continue;
-            }
+                try {
+                    answerNumber = Integer.parseInt(input);
+                } catch (NumberFormatException e) {
+                    System.out.println("Please enter a valid number.");
+                    continue;
+                }
 
-            if (answerNumber < 1 || answerNumber > question.getOptions().size()) {
-                System.out.println("Please choose a number between 1 and " + question.getOptions().size());
-                System.out.println();
-                continue;
+                if (answerNumber < 1 || answerNumber > question.getOptions().size()) {
+                    System.out.println("Please choose a number between 1 and " + question.getOptions().size());
+                    continue;
+                }
+
+                validInput = true;
             }
 
             String selectedAnswer = question.getOptions().get(answerNumber - 1);
