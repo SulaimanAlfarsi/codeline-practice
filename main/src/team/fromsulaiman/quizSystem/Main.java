@@ -35,10 +35,13 @@ public class Main {
         for (Question question : quiz.getQuestions()) {
             question.display();
 
-            System.out.print("Your answer: ");
-            String answer = scanner.nextLine();
+            System.out.print("Choose option number: ");
+            int answerNumber = scanner.nextInt();
+            scanner.nextLine();
 
-            if (answer.equalsIgnoreCase(question.getCorrectAnswer())) {
+            String selectedAnswer = question.getOptions().get(answerNumber - 1);
+
+            if (selectedAnswer.equalsIgnoreCase(question.getCorrectAnswer())) {
                 System.out.println("Correct!");
                 score++;
             } else {
