@@ -31,7 +31,12 @@ public class MainMenu {
 
             switch (choice) {
                 case 1:
-                    System.out.println("Admin menu coming soon...");
+                    AdminMenu adminMenu = new AdminMenu(
+                            doctorService,
+                            patientService,
+                            appointmentService
+                    );
+                    adminMenu.show();
                     break;
                 case 2:
                     System.out.println("Patient menu coming soon...");
