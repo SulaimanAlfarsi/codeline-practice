@@ -10,6 +10,11 @@ public class PatientService {
     private ArrayList<Patient> patients = new ArrayList<>();
 
     public void registerPatient(String name, String phone, int age) {
+        if (age <= 0) {
+            System.out.println("Age must be greater than zero.");
+            return;
+        }
+
         String id = IdGenerator.generatePatientId();
         Patient patient = new Patient(id, name, phone, age);
         patients.add(patient);
@@ -35,5 +40,8 @@ public class PatientService {
             patient.displayInfo();
             System.out.println("--------------------");
         }
+
     }
+
+
 }
