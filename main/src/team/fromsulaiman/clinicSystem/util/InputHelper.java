@@ -20,4 +20,16 @@ public class InputHelper {
             }
         }
     }
+    public String readRequiredText(String message) {
+        while (true) {
+            System.out.print(message);
+            String value = scanner.nextLine();
+
+            if (!value.trim().isEmpty()) {
+                return value;
+            }
+
+            System.out.println("Input cannot be empty.");
+        }
+    }
 }
