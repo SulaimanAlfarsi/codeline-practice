@@ -39,7 +39,12 @@ public class MainMenu {
                     adminMenu.show();
                     break;
                 case 2:
-                    System.out.println("Patient menu coming soon...");
+                    PatientMenu patientMenu = new PatientMenu(
+                            doctorService,
+                            patientService,
+                            appointmentService
+                    );
+                    patientMenu.show();
                     break;
                 case 3:
                     System.out.println("Doctor menu coming soon...");
