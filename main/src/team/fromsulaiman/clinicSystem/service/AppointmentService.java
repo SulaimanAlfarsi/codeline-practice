@@ -61,4 +61,19 @@ public class AppointmentService {
         appointment.complete();
         System.out.println("Appointment completed successfully.");
     }
+    public void viewAppointmentsByDoctor(String doctorId) {
+        boolean found = false;
+
+        for (Appointment appointment : appointments) {
+            if (appointment.getDoctor().getId().equalsIgnoreCase(doctorId)) {
+                appointment.displayInfo();
+                System.out.println("--------------------");
+                found = true;
+            }
+        }
+
+        if (!found) {
+            System.out.println("No appointments found for this doctor.");
+        }
+    }
 }
